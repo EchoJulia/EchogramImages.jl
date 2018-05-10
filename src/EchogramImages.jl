@@ -35,7 +35,7 @@ function echogram(A;
         A = clamp.(A,vmin,vmax)
     end
 
-    x = minimum(A)
+    x = convert(AbstractFloat, minimum(A)) # Force floating point arithmetic
     y = maximum(A)
     A = (A .- x) ./ (y - x)
     n = length(color)
