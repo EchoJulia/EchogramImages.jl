@@ -24,10 +24,11 @@ using EchogramImages
 using SimradRaw
 using SimradEK60
 using Images
-ps =collect(pings(EK60_SAMPLE))
-ps38 = [p for p in ps if p.frequency == 38000]
-Sv38 = Sv(ps38)
-img = echogram(Sv38)
+ps =collect(pings(EK60_SAMPLE));
+ps38 = [p for p in ps if p.frequency == 38000];
+Sv38 = Sv(ps38);
+r = R(ps38);
+img = echogram(Sv38,vmin=-95,vmax=-50)
 imresize(img,(480,640))
 ```
 
