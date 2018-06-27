@@ -1,6 +1,6 @@
 # EchogramImages
 
-Simple echogram displays of arbitrary matrices in Julia.
+Simple echogram images of arbitrary matrices in Julia.
 
 Works in IJulia or any Julia development environment.
 
@@ -12,7 +12,7 @@ A bit like imagesc in MATLAB.
 
 ```
 using EchogramImages
-echogram(rand(100,100))
+imagesc(rand(100,100))
 ```
 
 ## EK60 example
@@ -26,7 +26,7 @@ using SimradEK60
 ps =collect(pings(EK60_SAMPLE));
 ps38 = [p for p in ps if p.frequency == 38000];
 Sv38 = Sv(ps38);
-img = echogram(Sv38,vmin=-95,vmax=-50)
+img = imagesc(Sv38,vmin=-95,vmax=-50)
 
 ```
 
@@ -34,7 +34,7 @@ You can also use other color schemes
 
 ```
 using ColorSchemes
-img = echogram(Sv38,color=ColorSchemes.plasma)
+img = imagesc(Sv38,color=ColorSchemes.plasma)
 ```
 
 ## Acknowledgements

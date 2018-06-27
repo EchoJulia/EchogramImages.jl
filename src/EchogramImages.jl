@@ -5,7 +5,7 @@ using Images
 using MappedArrays
 using IndirectArrays
 
-export EK500_COLOURS, echogram
+export EK500_COLOURS, imagesc
 
 const EK500_COLOURS = [RGB(1, 1, 1),
                              RGB(159/255, 159/255, 159/255),
@@ -24,7 +24,7 @@ const EK500_COLOURS = [RGB(1, 1, 1),
 
 
 """
-    echogram(A;
+    imagesc(A;
              vmin = nothing,
              vmax = nothing,
              color=EK500_COLOURS,
@@ -40,7 +40,7 @@ Set size = nothing for full resolution.
 vmin and vmax are minimum and maximum values.
 
 """
-function echogram(A;
+function imagesc(A;
                   vmin = nothing,
                   vmax = nothing,
                   color=EK500_COLOURS,
