@@ -5,5 +5,8 @@ else
     using Test
 end
 
-# write your own tests here
-@test 1 == 2
+a = rand(100,100)
+img = imagesc(a)
+m,n = size(img)
+@test m == 480
+@test n == 640

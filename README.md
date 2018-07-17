@@ -1,5 +1,15 @@
 # EchogramImages
 
+
+[![Build Status](https://travis-ci.org/EchoJulia/EchogramImages.jl.svg?branch=master)](https://travis-ci.org/EchoJulia/EchogramImages.jl)
+
+[![Coverage Status](https://coveralls.io/repos/EchoJulia/EchogramImages.jl/badge.svg?branch=master&service=github)](https://coveralls.io/github/EchoJulia/EchogramImages.jl?branch=master)
+
+[![codecov.io](http://codecov.io/github/EchoJulia/EchogramImages.jl/coverage.svg?branch=master)](http://codecov.io/github/EchoJulia/EchogramImages.jl?branch=master)
+
+
+
+
 Simple echogram images of arbitrary matrices in Julia.
 
 Works in IJulia or any Julia development environment.
