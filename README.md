@@ -31,7 +31,7 @@ A useful companion to the SimradEK60.jl package.
 
 ```
 using EchogramImages
-using SimradRaw
+using SimradEK60TestData
 using SimradEK60
 ps =collect(pings(EK60_SAMPLE));
 ps38 = [p for p in ps if p.frequency == 38000];
