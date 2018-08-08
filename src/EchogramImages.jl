@@ -64,7 +64,7 @@ function imagesc(A;
 
     n = length(color)
 
-    g = x -> (clamp(isnan(x)? vmin : x, vmin, vmax) - vmin) / (vmax - vmin)
+    g = x -> (clamp(isnan(x) ? vmin : x, vmin, vmax) - vmin) / (vmax - vmin)
     f = s->clamp(round(Int, (n-1)*g(s))+1, 1, n)
 
     Ai = mappedarray(f, A)       # like f.(A) but does not allocate significant memory
