@@ -1,7 +1,5 @@
 julia 1.0
-Images 0.17.2
-EchogramColorSchemes 0.1.0
-ColorSchemes 3.1.0
-ColorTypes 0.2.6
-IndirectArrays 0.5.0
-MappedArrays 0.2.1
+Images 0.17
+ColorSchemes 3.1
+IndirectArrays 0.5
+MappedArrays 0.2
