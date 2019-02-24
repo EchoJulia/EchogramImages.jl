@@ -2,6 +2,7 @@ name = "EchogramImages"
 uuid = "ef02786f-6848-5d1f-95d1-5517628ee114"
 authors = ["Rob Blackwell <rob@robblackwell.com>"]
 repo = "https://github.com/EchoJulia/EchogramImages.jl.git"
+
 [deps]
 ColorSchemes = "35d6a980-a343-548e-a6ea-1d62b119f2f4"
 EchogramColorSchemes = "4c5cd976-4938-5223-a900-acc20q7c8507"
