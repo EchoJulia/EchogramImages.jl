@@ -1,2 +1,6 @@
 julia 1.0
-
+ColorSchemes
+EchogramColorSchemes
+Images
+IndirectArrays
+MappedArrays
