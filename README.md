@@ -44,7 +44,7 @@ You can also use other color schemes
 
 ```
 using ColorSchemes
-img = imagesc(Sv38,color=ColorSchemes.plasma)
+img = imagesc(Sv38,cmap=ColorSchemes.plasma)
 ```
 
 ## Acknowledgements

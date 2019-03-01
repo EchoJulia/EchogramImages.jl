@@ -20,7 +20,7 @@ A is any numeric array
 
 cmap can be a list of Colors or come from EchogramColorSchemes.jl,
 ColorSchemes.jl or PerceptualColourMaps.jl. The default `nothing`
-currently means use EK80 colours.
+currently means use EK500 colours.
 
 Set size = nothing for full resolution.
 
@@ -36,7 +36,7 @@ function imagesc(A;
 
 
     if cmap == nothing
-        cmap = addwhite(EK80)
+        cmap = addwhite(EK500)
     end
 
     if isa(cmap,ColorScheme)
