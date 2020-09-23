@@ -12,6 +12,9 @@ export imagesc, mat2gray, equalizedbins, quantize
              vmin = nothing,
              vmax = nothing,
              cmap= nothing,
+             over = nothing,
+             under = nothing,
+             bad = nothing,
              size=(480,640))
 
 A is any numeric array
@@ -22,15 +25,22 @@ currently means use EK500 colours.
 
 Set size = nothing for full resolution.
 
+`bad` - colour to use for NaN
+`under` - colour to use for values below `vmin`
+`over` - colour to use for values above `vmax`
+
 vmin and vmax are minimum and maximum values.
 
 
 """
 function imagesc(A::AbstractArray;
-                  vmin = nothing,
-                  vmax = nothing,
-                  cmap= nothing,
-                  size=(480,640))
+                 vmin = nothing,
+                 vmax = nothing,
+                 cmap= nothing,
+                 over = nothing,
+                 under = nothing,
+                 bad = nothing,
+                 size=(480,640))
 
 
     if cmap == nothing
@@ -62,7 +72,21 @@ function imagesc(A::AbstractArray;
     #f = s->clamp(round(Int, (n-1)*g(s))+1, 1, n)
     f = s->cmap[trunc(Int, (n-1)*g(s)) + 1]
 
-    f.(A)
+    img = f.(A)
+
+    if over != nothing
+        img[A .> vmax] .= over
+    end
+
+    if under != nothing
+        img[A .< vmin] .= under
+    end
+
+    if bad != nothing
+        img[isnan.(A)] .= bad
+    end
+
+    return img
 
 end
 
